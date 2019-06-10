@@ -144,7 +144,7 @@ jQuery(document).ready(function($) {
 		}
 
 		$('.single-text').owlCarousel({
-	    center: false,
+	    center: true,
 	    items: 1,
 	    loop: true,
 			stagePadding: 0,
@@ -153,6 +153,7 @@ jQuery(document).ready(function($) {
 	    pauseOnHover: false,
 	    nav: false,
 	    smartSpeed: 1000,
+	    dots:false,
 	  });
 		$('.slide-one-item').owlCarousel({
 	    center: false,
@@ -176,7 +177,7 @@ jQuery(document).ready(function($) {
 			stagePadding: 0,
 	    margin: 0,
 	    smartSpeed: 1000,
-	    autoplay: true,
+	    autoplay: false,
 	    pauseOnHover: true,
 	    mouseDrag: false,
 	    touchDrag: false,
@@ -188,7 +189,7 @@ jQuery(document).ready(function($) {
 			stagePadding: 0,
 	    margin: 0,
 	    smartSpeed: 1000,
-	    autoplay: true,
+	    autoplay: false,
 	    pauseOnHover: true,
 	    mouseDrag: false,
 	    touchDrag: false,
