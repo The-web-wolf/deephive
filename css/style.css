@@ -2180,11 +2180,6 @@ figure figcaption {
     opacity: .04;
   }
 
-.testimonial-wrap .container:nth-child(1){
-    border-radius: 2px;
-    box-shadow: 0 -16px 25px 0 rgba(0, 0, 0, .05);
-    padding-top: 10px
-}
 
 .contact-map-father{
   position: fixed;
@@ -2196,7 +2191,8 @@ figure figcaption {
   z-index: 1000;
   display:flex;
   justify-content: center;
-  align-content: center
+  align-content: center;
+  display:none;
 }
 .contact-map-son{
   width:100%;
@@ -2241,8 +2237,7 @@ figure figcaption {
   background:rgba(255,255,255,.8);
   border:none;
   border-bottom:1px solid white;
-  height:120px;
-  box-shadow: 0px 0px 15px #fff;
+  height:150px;
   padding:5px;
   color:grey;
   font-size:14px;
