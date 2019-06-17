@@ -231,7 +231,7 @@ jQuery(document).ready(function($) {
 	// navigation
   var OnePageNavigation = function() {
     var navToggler = $('.site-menu-toggle');
-   	$("body").on("click", ".main-menu li a[href^='#'], .smoothscroll[href^='#'], .site-mobile-menu .site-nav-wrap li a", function(e) {
+   	$("body").on("click", ".main-menu li a[href^='#'], .smoothscroll[href^='#']", function(e) {
       e.preventDefault();
 
       var hash = this.hash;
@@ -294,4 +294,78 @@ jQuery(document).ready(function($) {
 	  return false;
 	});
 
+  	let resetPosition = () => {
+  		$('.portfolio_item').each(function(){
+  			$(this).removeClass('order-4')
+  			$(this).removeClass('order-12')
+  			$(this).removeClass('order-1')
+  			$(this).removeClass('slideInLeft')
+  			$(this).removeClass('pricing-popular');
+  			$(this).removeClass('slideInRight')
+  		})
+  	}
+
+  $('.portfolio_item.item_1').click(function(){
+  	resetPosition()
+  	$('.item_2').addClass('slideInRight');
+  	$('.item_2').addClass('order-4');
+  	$('.item_3').addClass('order-12');
+  	$('.item_3').addClass('slideInLeft');
+  	$(this).addClass('pricing-popular');
+  	$(this).addClass('order-1')
+  	let child = $(this).find('.pricing')
+  	//$(child).css('width', '900px')
+
+
+  })  
+  $('.portfolio_item.item_2').click(function(){
+  	resetPosition()
+  	$('.item_1').addClass('slideInRight');
+  	$('.item_1').addClass('order-4');
+  	$('.item_3').addClass('order-12');
+  	$('.item_3').addClass('slideInLeft');
+  	$(this).addClass('slideInRight')
+  	$(this).addClass('pricing-popular');
+  	$(this).addClass('order-1')
+  	let child = $(this).find('.pricing')
+  	//$(child).css('width', '900px')
+
+
+  })  
+  $('.portfolio_item.item_3').click(function(){
+  	resetPosition()
+  	$('.item_1').addClass('slideInRight');
+  	$('.item_1').addClass('order-4');
+  	$('.item_2').addClass('order-12');
+  	$('.item_2').addClass('slideInLeft');
+  	$(this).addClass('slideInRight')
+  	$(this).addClass('pricing-popular');
+  	$(this).addClass('order-1')
+  	let child = $(this).find('.pricing')
+  	//$(child).css('width', '900px')
+
+
+  })
+
+
 });
+
+ 	/*$('.portfolio_item').click(function(){
+		$('.portfolio_item').addClass('slideOutRight')
+		$(this).removeClass('slideOutRight')
+		$(this).addClass('slideInRight')
+		$(this).addClass('pricing-popular')
+		setTimeout(function(){
+			$('.portfolio_item.pricing-popular').addClass('order-12')
+		},2000)
+	})*/
+
+
+/*let keyGen = () => {
+	let digits = Math.floor(Math.random() * 9999) + 1111;  
+	var today = new Date();
+	var time = today.getHours() + '' + today.getMinutes();
+	return time;
+} 
+
+console.log(keyGen())*/

@@ -52,6 +52,10 @@
         color:#444;
         text-transform: uppercase;
       }
+      .service img{
+        width: 170px !important;
+        height: 170px !important;
+      }      
     </style>
          
   </head>
@@ -91,12 +95,10 @@
             <nav class="site-navigation position-relative text-right" role="navigation">
 
               <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
-                <li><a href="#" class="nav-link">People </a></li>
-                <li><a href="#" class="nav-link">Portfolio</a></li>
-                <li><a href="#" class="nav-link">Services</a></li>
-                <li><a href="#" class="nav-link">Career</a></li>
-                <li><a href="#" class="nav-link">Blog</a></li>
-                <li><a href="#" class="nav-link">Contact</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="#" class="nav-link contact-trigger">Contact</a></li>
               </ul>
             </nav>
           </div>
@@ -121,21 +123,21 @@
             <div class="single-text owl-carousel" style="margin-top: 50px !important">
               
               <div class="slide">
-                <h2  data-aos="fade-up" data-aos-delay="100" style="margin-top: 2%;text-shadow: -20px 0px 8px #Eee;font-family:'Philosopher';font-size: 3em;color:#eee">We <span style="color:orange"> Build</span></h2>
+                <h2  data-aos="fade-up" data-aos-delay="100" style="margin-top: 2%;text-shadow: -20px 0px 8px #Eee;font-family:'Philosopher';font-size: 4em;color:#eee">We <span style=""> Build</span></h2>
                 <div data-aos="fade-up" data-aos-delay="100">
                   
                 </div>
               </div>
 
               <div class="slide">
-                <h2 data-aos="fade-up" data-aos-delay="100" style="margin-top: 2%;text-shadow: -20px 0px 8px #Eee;font-family:'Philosopher';font-size: 3em;color:#eee">We <span style="color:orange"> Train</span>.</h2>
+                <h2 data-aos="fade-up" data-aos-delay="100" style="margin-top: 2%;text-shadow: -20px 0px 8px #Eee;font-family:'Philosopher';font-size: 4em;color:#eee">We <span style=""> Train</span>.</h2>
                 <div data-aos="fade-up" data-aos-delay="100">
                   
                 </div>
               </div>
 
               <div class="slide">
-                <h2 data-aos="fade-up" data-aos-delay="100" style="margin-top: 2%;text-shadow: -20px 0px 8px #Eee;font-family:'Philosopher';font-size: 3em;color:#eee">We <span style="color:orange"> Innovate</span>.</h2>
+                <h2 data-aos="fade-up" data-aos-delay="100" style="margin-top: 2%;text-shadow: -20px 0px 8px #Eee;font-family:'Philosopher';font-size: 4em;color:#eee">We <span style=""> Innovate</span>.</h2>
                 <div data-aos="fade-up" data-aos-delay="100">
                   
                 </div>
@@ -154,41 +156,39 @@
       </a>
     </div>  
 
-    <div class="site-section" id="next">
+    <div class="site-section bg-light" id="next">
       <div class="container">
         <div class="row mb-5">
           <div class="col-md-4 text-center service" data-aos="fade-up" data-aos-delay="">
-            <img src="https://neoteric.eu/wp-content/uploads/2018/05/035-web-develop.svg" alt="We Build awesome web applications" class="img-fluid w-25 mb-4">
+            <img src="images/service1.svg" alt="We Build awesome web applications" class="img-fluid img-responsive mb-4">
             <h3 class="card-title">App Development</h3>
             <p>Web Applications</p>
             <p>Mobile Applications</p>
             <p>SaaS Projects</p>
           </div>
           <div class="col-md-4 text-center service" data-aos="fade-up" data-aos-delay="100">
-            <img src="https://neoteric.eu/wp-content/uploads/2018/06/006-artificial-intelligence.svg" alt="Artificial Intelligence" class="img-fluid w-25 mb-4">
+            <img src="images/service2.svg" alt="Artificial Intelligence" class="img-fluid img-responsive mb-4">
             <h3 class="card-title">Deep Technologies</h3>
             <p>Artificial Intelligence</p>
             <p>Immersive Reality</p>
             <p>Blockchain</p>
           </div>
           <div class="col-md-4 text-center service" data-aos="fade-up" data-aos-delay="200">
-            <img src="https://neoteric.eu/wp-content/uploads/2018/05/002-full-stack-150x150.png" alt="We totally take care of your products" class="img-fluid w-25 mb-4">
+            <img src="images/service3.svg" alt="We totally take care of your products" class="img-fluid img-responsive mb-4">
             <h3 class="card-title">Consultancy </h3>
             <p>Trainings</p>
             <p>Outsourcing</p>
             <p>Product/Project Management</p>
           </div>
         </div>
-        <div class="text-center" style="text-align: center">
-          <a href="service" class="mr-auto ml-auto btn btn-primary"> Our Services </a>
-        </div>
+
       </div>
     </div>
 
     
 
 
-    <section class="site-section bg-light">
+    <section class="site-section">
       <div class="container">
 
         <div class="row mb-5 justify-content-center">
@@ -262,13 +262,11 @@
                 <p>We build long-term relationships with our customers and work as their technology partners for several years in most cases. Our flexible solutions are designed to ensure we continue to meet your ever-changing needs and also help bring new opportunities for growth to your business.
               </p>
               </div>              
-            </div>
-            
-          </div>
+            </div>            
+          </div>        
         </div>
       </div>
     </section>
-
     
     <section class="contact-map-father">
       <div class="contact-map-son">
@@ -281,18 +279,58 @@
               <input type="text"  name="name" class="form-control" placeholder="Your firstname *" required="">
               <input type="email" name="email" class="form-control" placeholder="Email Address *" required="">
               <input type="tel"   name="email" class="form-control" placeholder="Phone Number">
-              <select class="form-control" place>
-                <option></option>
-              </select>
               <textarea placeholder="Write your message here" autocomplete="off">
                 
               </textarea>
-
+              <button class="btn btn-primary btn-block" style="border-radius: 10px">Contact Us</button>
             </form>
           </div>
         </div>
       </div>
     </section>    
+
+    <section class="site-section bg-light" style="margin:0px" id="pricing-section">
+
+      <div class="container">
+        <div class="description_father">
+          <div class="description_son"></div>
+        </div>        
+        <div class="row d-flex">
+          <div class="col-12 text-left" data-aos="fade-up">
+            <h2 class="section-title mb-3">Our Recent Works</h2>
+            <p>No matter the industry, complexity or time difference. Before we start the development process, we carefully analyze your business, technology, and design goals to ensure a top class product delivery that will meet your expectations.</p>
+          </div>
+        </div>
+        <div class="row mb-5">
+          <div class="col-lg-4 portfolio_item animated item_1" data-aos="fade-up" data-aos-delay="">
+            <div class="pricing">
+              <h3 class="text-center ">CitiKab</h3>
+              <div class="price text-center mb-4 ">
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 portfolio_item animated item_2" data-aos="fade-up" data-aos-delay="100">
+            <div class="pricing">
+              <h3 class="text-center">Park Crowdy</h3>
+              <p class="text-center port_desc">
+                CitiKab is an online taxi platform that connects riders with available drivers nearby...          
+              </p>
+              <img src="http://www.parkcrowdy.com/img/logo.png" style="width: 100px;margin:0 auto">
+            </div>
+
+          </div>
+
+          <div class="col-lg-4 portfolio_item animated item_3" data-aos="fade-up" data-aos-delay="200">
+            <div class="pricing">
+              <h3 class="text-center">Medinomic</h3>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </section>
 
 
     <section class="site-section testimonial-wrap" id="testimonials-section" data-aos="fade">
@@ -426,5 +464,14 @@
   <script src="js/main.js"></script>
 
   
+      <script type="text/javascript">
+      $('.contact-map-son .close').click(function(){
+        $('.contact-map-father').fadeOut('linear')
+      })
+      $('.contact-trigger').click(function(e){
+        e.preventDefault();
+        $('.contact-map-father').fadeIn('linear')
+      })
+    </script>
   </body>
 </html>
