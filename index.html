@@ -98,7 +98,7 @@
                 <li><a href="about.html" class="nav-link">About</a></li>
                 <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
                 <li><a href="services.html" class="nav-link">Services</a></li>
-                <li><a href="#" class="nav-link contact-trigger">Contact</a></li>
+                <li><a href="contact.html" class="nav-link contact-trigger">Contact</a></li>
               </ul>
             </nav>
           </div>
@@ -271,6 +271,7 @@
     <section class="contact-map-father">
       <div class="contact-map-son">
         <span class="close">Close</span>
+        
         <div class="contact-body">
           <h2 class="text-center" style="font-family: 'Pacifico'">Contact Us</h2>
           <span style="font-family: 'Poppins'">Kindly Fill Out this brief form to get to us and we will get back to you in the shortest time</span>
@@ -466,11 +467,13 @@
   
       <script type="text/javascript">
       $('.contact-map-son .close').click(function(){
-        $('.contact-map-father').fadeOut('linear')
+        $('.contact-map-father').css('visibility' , 'hidden')
       })
       $('.contact-trigger').click(function(e){
+        alert()
         e.preventDefault();
-        $('.contact-map-father').fadeIn('linear')
+        $('.contact-map-father').css('visibility' , 'visible')
+        console.log('')
       })
     </script>
   </body>
