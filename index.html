@@ -55,7 +55,11 @@
       .service img{
         width: 170px !important;
         height: 170px !important;
-      }      
+      }     
+      body{
+        max-width: 100%;
+        overflow-x:hidden;
+      } 
     </style>
          
   </head>
@@ -96,7 +100,7 @@
 
               <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
                 <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                <li><a href="#portfolio-carousel" class="smoothscroll">Portfolio</a></li>
                 <li><a href="services.html" class="nav-link">Services</a></li>
                 <li><a href="contact.html" class="nav-link contact-trigger">Contact</a></li>
               </ul>
@@ -149,13 +153,13 @@
         </div>
       </div>
 
+
+    </div>  
       <a href="#next" class="mouse smoothscroll">
         <span class="mouse-icon">
           <span class="mouse-wheel"></span>
         </span>
       </a>
-    </div>  
-
     <div class="site-section bg-light" id="next">
       <div class="container">
         <div class="row mb-5">
@@ -167,7 +171,7 @@
             <p>SaaS Projects</p>
           </div>
           <div class="col-md-4 text-center service" data-aos="fade-up" data-aos-delay="100">
-            <img src="images/service2.svg" alt="Artificial Intelligence" class="img-fluid img-responsive mb-4">
+            <img src="images/ai.svg" alt="Artificial Intelligence" class="img-fluid img-responsive mb-4">
             <h3 class="card-title">Deep Technologies</h3>
             <p>Artificial Intelligence</p>
             <p>Immersive Reality</p>
@@ -290,7 +294,7 @@
       </div>
     </section>    
 
-    <section class="site-section bg-light" style="margin:0px" id="pricing-section">
+    <section class="site-section bg-light" style="margin:0px"  id="portfolio-carousel">
 
       <div class="container">
         <div class="description_father">
@@ -302,34 +306,125 @@
             <p>No matter the industry, complexity or time difference. Before we start the development process, we carefully analyze your business, technology, and design goals to ensure a top class product delivery that will meet your expectations.</p>
           </div>
         </div>
-        <div class="row mb-5">
-          <div class="col-lg-4 portfolio_item animated item_1" data-aos="fade-up" data-aos-delay="">
-            <div class="pricing">
-              <h3 class="text-center ">CitiKab</h3>
-              <div class="price text-center mb-4 ">
-                
+        <style type="text/css">
+          .port-container{
+            box-shadow: -10px 10px 10px #eee;
+            border-radius: 5px;
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+            padding:10px 10px;
+          }
+          .port-container-opp{
+            box-shadow: 10px 10px 10px #eee;
+            border-radius: 5px;
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+            padding:10px 10px;
+          }          
+          .port-head{
+            padding-top: 20px;
+            padding-left: 10px
+          }
+          .port-body{
+            padding: 20px 10px;
+          }
+          .port-body ol{
+            list-style-type: none;
+            list-style-position: inside;
+          }
+          .port-right{
+            position: absolute;
+            top:20px;
+            right:30px;
+            font-size: 30px;
+            padding:5px;
+            border-radius: 50%;
+            background: #ED8D46;
+            color: white;
+            box-shadow: 0px 0px 20px #ED8D46
+          }          
+          .port-left{
+            display:none;
+          }
+          .image-cont{
+            max-height: 360px;
+            overflow-y: scroll;
+          }
+          .image-cont img{
+
+          }
+        </style>
+        <div class="owl-carousel portfolio-carousel" style="margin-top: 30px">
+          <div class="item">
+            <div class="row">
+              <div class="col-lg-5 text-center image-cont" data-aos="fade-right">
+                <img src="images/parkcrowdy.jpg" alt="Park crowdy" style="width: 500px;height: auto;margin: auto;padding-bottom: 30px;max-width: 100%">
               </div>
+              <div class="col-lg-7" data-aos="fade-left">
+                <div class="port-container container">
+                  <div class="port-head text-left">
+                    <h2 class="color-primary">Park Crowdy</h2>
+                  </div>
+                  <div class="port-body">
+                    <p>
+                      Parkcrowdy is revolutionizing the way we pay for parking in Africa. Making it possible to easily find parking spots in your cities and enjoy the convenience of paying with your smartphone
+                    </p>
+                    <h5 class="color-primary">Deliverables</h5>
+                    <p>
+                      Responsive website,<br> Android & iOSIntuitive user interfaces and functional experience,<br> Simple to use CMS platform with admin dashboard with analytics.<br>
+                    </p>
+                  </div>
+                </div>
+              </div>            
             </div>
           </div>
-
-          <div class="col-lg-4 portfolio_item animated item_2" data-aos="fade-up" data-aos-delay="100">
-            <div class="pricing">
-              <h3 class="text-center">Park Crowdy</h3>
-              <p class="text-center port_desc">
-                CitiKab is an online taxi platform that connects riders with available drivers nearby...          
-              </p>
-              <img src="http://www.parkcrowdy.com/img/logo.png" style="width: 100px;margin:0 auto">
+          <div class="item">
+            <div class="row">
+              <div class="col-lg-5 text-center image-cont" data-aos="fade-right">
+                <img src="images/citikab.png" alt="Citikab" style="width: 500px;height: auto;margin: auto;padding-bottom: 30px;max-width: 100%">
+              </div>
+              <div class="col-lg-7" data-aos="fade-left" >
+                <div class="port-container container">
+                  <div class="port-head text-left">
+                    <h2 class="color-primary">Citicab</h2>
+                  </div>
+                  <div class="port-body">
+                    <p>
+                      CitiKab is an online taxi platform that connects riders with available drivers nearby. CitiKab integrates city transportation for passengers and driver-partners onto a mobile technology platform that ensures convenient, safety and quick service.
+                    </p>
+                    <h5 class="color-primary">Deliverables</h5>
+                    <p>
+                      Responsive website,<br> Android & IOS, USSD,<br> Intuitive user interfaces and functional experience,<br> Simple to use CMS platform with admin dashboard and analytics<br>
+                    </p>
+                  </div>
+                </div>
+              </div>            
             </div>
-
           </div>
-
-          <div class="col-lg-4 portfolio_item animated item_3" data-aos="fade-up" data-aos-delay="200">
-            <div class="pricing">
-              <h3 class="text-center">Medinomic</h3>
+<!--           <div class="item">
+            <div class="row" >
+              <div class="col-lg-5 text-center" data-aos="fade-right">
+                <img src="images/ai.svg" style="width: 500px;height: auto;margin: auto;padding-bottom: 30px;max-width: 100%">
+              </div>
+              <div class="col-lg-7" data-aos="fade-left">
+                <div class="port-container container">
+                  <div class="port-head text-left">
+                    <h2 class="color-primary">Kobonest </h2>
+                  </div>
+                  <div class="port-body">
+                    <p>
+                      Parkcrowdy is revolutionizing the way we pay for parking in Africa. Making it possible to easily find parking spots in your cities and enjoy the convenience of paying with your smartphone
+                    </p>
+                    <h5 class="color-primary">Deliverables</h5>
+                    <p>
+                      Material design, Highly Secured servers, Easy to use user and admin platforms across all platforms.
+                    </p>
+                  </div>
+                </div>
+              </div>            
             </div>
-          </div>
+          </div> -->
         </div>
-        
       </div>
     </section>
 
@@ -470,7 +565,6 @@
         $('.contact-map-father').css('visibility' , 'hidden')
       })
       $('.contact-trigger').click(function(e){
-        alert()
         e.preventDefault();
         $('.contact-map-father').css('visibility' , 'visible')
         console.log('')

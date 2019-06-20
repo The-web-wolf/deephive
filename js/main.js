@@ -1,7 +1,7 @@
  AOS.init({
  	duration: 800,
- 	easing: 'slide',
- 	once: true
+ 	easing: 'linear',
+ 	once: false
  });
 
 jQuery(document).ready(function($) {
@@ -196,6 +196,18 @@ jQuery(document).ready(function($) {
 	    dot: true,
 	    
 	  });
+
+	$(".portfolio-carousel").owlCarousel({
+		center: true,
+	    items: 1,
+	    loop: true,
+		stagePadding: 0,
+	    margin: 0,
+	    autoplay: false,
+		nav: true,
+		dot : true,
+		navText: ['<span class="icon-arrow_back port-left">', '<span class="icon-arrow_forward port-right">'],
+	});	  
 	  
 
 	  $('.custom-next').click(function(e) {
