@@ -362,22 +362,72 @@ jQuery(document).ready(function($) {
 
 });
 
- 	/*$('.portfolio_item').click(function(){
-		$('.portfolio_item').addClass('slideOutRight')
-		$(this).removeClass('slideOutRight')
-		$(this).addClass('slideInRight')
-		$(this).addClass('pricing-popular')
-		setTimeout(function(){
-			$('.portfolio_item.pricing-popular').addClass('order-12')
-		},2000)
-	})*/
+$('#step_1').click(function(e){
+	e.preventDefault();
+	let i_need = $(".i_need");
+	let i_need_checked = false;
+	$(i_need).each(function(){
+		if($(this).prop("checked") == true){
+            i_need_checked = true
+        }
+	})
+	if(i_need_checked == false){
+		alert("Kindly Select One Or More Services")
+		return false;
+	}
+	$("#view_1").fadeOut('linear')
+	setTimeout(function(){
+		$("#view_2").fadeIn('linear')
+	},400)
+	$('.caption-text').text("I Need Help In")
+})
 
+$("#init").click(function(){
+	$("#view_2").fadeOut('linear')
+	setTimeout(function(){
+		$("#view_1").fadeIn('linear')
+	},400)
+	$('.caption-text').text("I Want To Build")	
+})
 
-/*let keyGen = () => {
-	let digits = Math.floor(Math.random() * 9999) + 1111;  
-	var today = new Date();
-	var time = today.getHours() + '' + today.getMinutes();
-	return time;
-} 
+$("#step_2").click(function(){
+	$("#view_2").fadeOut('linear')
+	setTimeout(function(){
+		$("#view_3").fadeIn('linear')
+	},400)	
+	$('.caption-text').text("Get An Estimate!")	
+})
 
-console.log(keyGen())*/
+$("#step_1_s").click(function(){
+	$("#view_3").fadeOut('linear')
+	setTimeout(function(){
+		$("#view_2").fadeIn('linear')
+	},400)	
+	$('.caption-text').text("I Need Help In")
+})
+
+let form = $("#estimate-form");
+$(form).submit(function(e){
+	e.preventDefault()
+	let formData = $(form).serialize()
+	$.ajax({
+		url  : 'controllers/estimate.php',
+		type : "POST",
+		data : formData
+	})
+	.done(function(response){
+		if(response == 'sent'){
+			$("#view_3").fadeOut('linear');
+			setTimeout(function(){
+				$("#view_4").slideDown('easeIn')
+			},300);
+			$('.caption-text').text('Sent. We\'ll Get Back To You Shortly!')
+		}
+		else{
+			alert(response)
+		}
+	})
+	.fail(function(){
+		alert('Could Not establish Connection with Our server. Kindly Check your internet Connection and try again')
+	})
+})	

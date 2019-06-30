@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Estimate My Project &mdash; Deephive</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Pacifico|Poppins&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="fonts/flaticon/style.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+    <meta name="theme-color" content="#ED8D46">
+    <link rel="stylesheet" href="css/style.css">
+    <style type="text/css">
+      #home-section-overlay{
+        background : linear-gradient(to bottom, rgba(245, 98, 0, 0.8), rgba(251, 208, 0, 0.8));
+        position: absolute;
+        background-attachment: fixed;
+        background-position: top
+        top:0px;
+        left:0px;
+        width:100%;
+        height:100%;
+      }
+      .service p {
+        letter-spacing: 5px;
+        font-family: 'Poppins' , sans-serif;
+
+      }
+      .service h3{
+        margin-bottom:30px;
+        font-family: 'Pacifico';
+        font-weight: lighter;
+        font-size: 25px !important;
+        color:#444;
+        text-transform: uppercase;
+      }
+    </style>
+         
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300" >
+  
+
+  <div id="overlayer"></div>
+  <div class="loader">
+    <div class="spinner-border text-primary" style="color:#ED8D46 !important" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+
+
+  <div class="site-wrap">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+   
+    
+    <header class="site-navbar js-sticky-header site-navbar-target" style="box-shadow: 0px 0px 50px #ED8D46" role="banner">
+
+      <div class="container">
+        <div class="row align-items-center">
+          
+          <div class="col-6 col-xl-2">
+            <h1 class="mb-0 site-logo"><a href="index.html" class="h2 mb-0">Deephive<span class="text-primary">.</span> </a></h1>
+          </div>
+
+          <div class="col-12 col-md-10 d-none d-xl-block">
+            <nav class="site-navigation position-relative text-right" role="navigation">
+
+              <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="#team-section" class="nav-link smoothscroll">People </a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="#" class="nav-link contact-trigger">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle float-right"><span class="icon-menu h3"></span></a></div>
+
+        </div>
+      </div>
+      
+    </header>
+    <div class="site-blocks-cover" style="min-height: 0px;height: 200px !important;background-image: url(https://www.fg-a.com/wallpapers/2017-white-circles.jpg);background-attachment:fixed;max-height: 70%"  data-aos="fade" id="home-section">
+      <div id="home-section-overlay"></div>
+      <div class="container">
+        <div class="row ">
+
+          
+          <div class="col-12" style="padding-top: 150px">
+            <h1 class=" text-center caption-text" data-aos="fade-up" style="font-weight:lighter;word-wrap:break-word;font-family: 'Pacifico';background:#fff;border-radius: 10px;box-shadow:0px 0px 10px #fff;padding:15px 4%;color: #ED8D46">I Want To Build</h1>
+          </div>
+            
+        </div>
+      </div>
+    </div>  
+
+    <div class="site-section cta-big-image" id="about-section" style="background:url(images/pattern-bg.jpg);background-attachment:fixed;background-repeat: no-repeat;background-size: cover;padding-bottom: 0px"> 
+      <div class="container">
+        <form class="row" style="margin-top: 100px" action="controllers/estimate.php" method="post" id="estimate-form">
+          <div class="col-lg-12 mb-5 text-center" data-aos="fade-up" data-aos-delay="">
+            <div class="row" id="view_1">
+              <div class="col-6 col-md-3 ">
+                <div class="estimate-box">
+                  <input type="checkbox" name="i_need[]" class="i_need" value="Web Application">
+                  <div class="icon">
+                    <div class="id">
+                      <span class=" icon-laptop"></span>
+                      <h5>Web App</h5>                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-md-3 ">
+                <div class="estimate-box">
+                  <input type="checkbox" name="i_need[]" class="i_need" value="Mobile Application">
+                  <div class="icon">
+                    <div class="id">
+                      <span class=" icon-mobile-phone"></span>
+                      <h5>Mobile App</h5>                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class=" col-6 col-md-3">
+                <div class="estimate-box">
+                  <input type="checkbox" name="i_need[]" class="i_need" value="USSD Application">
+                  <div class="icon">
+                    <div class="id">
+                      <span class=" icon-sim_card"></span>
+                      <h5>USSD / Voice App</h5>                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class=" col-6 col-md-3">
+                <div class="estimate-box">
+                  <input type="checkbox" name="i_need[]" class="i_need" value="Custom Application">
+                  <div class="icon">
+                    <div class="id">
+                      <span class=" icon-web"></span>
+                      <h5>Custom</h5>                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <img src="images/next.png" id="step_1" style="width: 160px;margin-left: auto;cursor: pointer;">
+            </div>
+            <div class="row" id="view_2" style="display: none;">
+              <div class="col-6 col-md-3 ">
+                <div class="estimate-box">
+                  <input type="checkbox" name="i_want[]" value="Design">
+                  <div class="icon">
+                    <div class="id">
+                      <span class=" icon-palette"></span>
+                      <h5>Design</h5>                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-md-3 ">
+                <div class="estimate-box">
+                  <input type="checkbox" name="i_want[]" value="Development">
+                  <div class="icon">
+                    <div class="id">
+                      <span class=" icon-build"></span>
+                      <h5>Development</h5>                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class=" col-6 col-md-3">
+                <div class="estimate-box">
+                  <input type="checkbox" name="i_want[]" value="Modification">
+                  <div class="icon">
+                    <div class="id">
+                      <span class=" icon-gear"></span>
+                      <h5>Modification</h5>                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class=" col-6 col-md-3">
+                <div class="estimate-box">
+                  <input type="checkbox" name="i_want[]" value="Brain Storm">
+                  <div class="icon">
+                    <div class="id">
+                      <span class=" icon-coffee"></span>
+                      <h5>Brain Storm</h5>                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <img src="images/prev.png" id="init" style="width: 160px;margin-right: auto;cursor: pointer;float:left">
+              <img src="images/next.png" id="step_2" style="width: 160px;margin-left: auto;cursor: pointer;float: right;">
+            </div>
+
+            <div class="row" id="view_3" style="display: none;">
+              <div class="col-sm-5">
+                <figure class="circle-bg">
+                <img src="images/message.svg" alt="Describe Project" class="img-fluid">
+                </figure>                
+              </div>
+              <div class="col-sm-7">
+                <div class="contact-form">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <input type="text"  name="name" class="form-control" placeholder="Your Fullname *" required="">
+                    </div>
+                    <div class="col-sm-6">
+                      <input type="email" name="email" class="form-control" placeholder="Email Address *" required="">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <input type="tel"   name="tel" class="form-control" placeholder="Contact Number">
+                    </div>
+                    <div class="col-sm-6">
+                      <input type="text" name="company" class="form-control" placeholder="Company Name">
+                    </div>
+                  </div> 
+                  <textarea placeholder="Write Description Of Project" name="description" autocomplete="off" minlength="50" required="" style="border-bottom: 3px double #ED8D46;padding:5px 10px"></textarea>                                   
+                </div>                
+              </div>
+              <div id="submit_cont" style="margin-top: 50px">
+                <img src="images/prev.png" id="step_1_s" style="width: 160px;margin-right: auto;cursor: pointer;">
+                <input type="image" src="images/next.png" border="0" alt="Submit" style="width: 160px;cursor: pointer;position: absolute;right: 0px;bottom: 0px" />
+              </div>
+            </div>
+            
+            <div id="view_4" style="display: none;text-align: center">
+              <img src="images/sent.svg" style="width: 100%;height: 500px;max-width: 500px;margin:auto">
+            </div>          
+          </div>
+
+        </form>    
+        
+      </div>  
+    </div>  
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-9">
+            <div class="row">
+              <div class="col-md-8">
+                <h2 class="footer-heading mb-4"  style="font-size:20px">About Us</h2>
+                <p>By reinforcing the market pool for Deep Tech creators and engineers we help companies solve the technical talent shortage and build high-performing distributed engineering teams.</p>
+              </div>
+              <div class="col-md-3 ml-auto">
+                <h2 class="footer-heading mb-4"  style="font-size:20px">Quick Links</h2>
+                <ul class="list-unstyled">
+                  <li><a href="about.html" class="smoothscroll">About Us</a></li>
+                  <li><a href="services.html" class="smoothscroll">Services</a></li>
+                  <li><a href="#testimonials-section" class="smoothscroll">Testimonials</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <h2 class="footer-heading mb-4" style="font-size:20px">Get Started</h2>    
+              <a class="btn btn-primary text-white" style="border-radius:0px" role="button" href="#">Estimate My Project</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+  </div> <!-- .site-wrap -->
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.fancybox.min.js"></script>
+  <script src="js/jquery.sticky.js"></script>
+  <script src="js/isotope.pkgd.min.js"></script>
+
+  
+  <script src="js/main.js"></script>
+
+  
+  </body>
+</html>
+
+<!--             <div data-aos="fade-right" data-aos-delay="800">
+              <div class="contact-form">
+                <form id="contactForm" method="post" action="controllers/contactHandler.php">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <input type="text"  name="name" class="form-control" placeholder="Your Fullname *" required="">
+                    </div>
+                    <div class="col-sm-6">
+                      <input type="email" name="email" class="form-control" placeholder="Email Address *" required="">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <input type="tel"   name="tel" class="form-control" placeholder="Phone Number">
+                    </div>
+                    <div class="col-sm-6">
+                      <input type="text" name="project" class="form-control" placeholder="Project Title">
+                    </div>
+                  </div>
+                  <textarea placeholder="Write your message here" autocomplete="off" style="border-bottom: 3px solid #ED8D46 !important">
+                    
+                  </textarea>
+                  <button class="btn btn-primary btn-block" type="submit" style="border-radius: 0px;">Get Project Estimate</button>
+                </form>
+              </div>              
+            </div>    -->

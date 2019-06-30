@@ -5817,7 +5817,7 @@ figure figcaption {
   position: fixed;
   top:0px;
   left:0px;
-  background:rgba(255,255,255,.7);
+  background:rgba(2,2,2,.7);
   width:100%;
   height:100%;
   z-index: 1000;
@@ -5848,6 +5848,11 @@ figure figcaption {
   content: 'Close';
   cursor: pointer
 }
+.contact-map-son h2{
+  float:left;
+  margin-left:20px;
+  margin-top:12px;
+}
 
 .contact-map-son .contact-body{
   background:#eee;
@@ -5870,7 +5875,7 @@ figure figcaption {
   border:none;
   border-bottom:1px solid white;
   height:150px;
-  padding:5px;
+  font-size: 15px;
   color:grey;
   font-size:14px;
   outline-color: #ED8D46;
@@ -5955,3 +5960,60 @@ figure figcaption {
   color:#ED8D46 !important;
 
 }
+
+/*Estimate Section */
+
+.estimate-box{
+  height: 130px;
+  width: 100%;
+  max-width: 170px;
+  display: inline-block;
+}
+
+.estimate-box input[type=checkbox],.estimate-box .icon{
+  position: relative;
+  top:0px;
+  height: 100%;
+  width: 100%;
+  left:1.5px;
+  cursor: pointer;
+  z-index: 2;
+  opacity: 0;
+}
+
+.estimate-box input:checked + .icon{
+  background :linear-gradient(to left bottom , #ED8D46 , #E03533);
+  -webkit-transition:all .35s linear;
+  box-shadow: 0px 0px 25px #ED8D46,inset -10px 0px 10px #fff;
+  color:#fff !important;
+}
+
+.estimate-box .icon{
+  -webkit-transition:all .35s linear;
+  top: -106%;
+  z-index: 1;
+  opacity: 1;
+  border-radius:10px;
+  box-shadow: 0px 0px 25px rgba(100,100,200,.2);
+  display: flex;
+  justify-content: center;
+  background:#FFF;
+  align-content: center;
+}
+.estimate-box .icon {
+  font-size: 50px;
+  margin:auto;
+  text-align: center;
+  color:#ED8D46;
+}
+.estimate-box .icon .id h5{
+  font-size: 15px ;
+  text-align: center;
+  font-family: 'Pacifico';
+  text-transform: uppercase;
+}
+
+body,html{
+  max-width: 100%;
+  overflow-x:hidden;
+} 

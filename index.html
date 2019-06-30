@@ -56,10 +56,7 @@
         width: 170px !important;
         height: 170px !important;
       }     
-      body{
-        max-width: 100%;
-        overflow-x:hidden;
-      } 
+
     </style>
          
   </head>
@@ -102,7 +99,8 @@
                 <li><a href="about.html" class="nav-link">About</a></li>
                 <li><a href="#portfolio-carousel" class="smoothscroll">Portfolio</a></li>
                 <li><a href="services.html" class="nav-link">Services</a></li>
-                <li><a href="contact.html" class="nav-link contact-trigger">Contact</a></li>
+                <li><a href="#" class="nav-link contact-trigger">Contact</a></li>
+                <li><a href="estimate-project.html" class="nav-link btn btn-primary " style="background-color: transparent;padding:7px 10px">Estimate My Project</a></li>
               </ul>
             </nav>
           </div>
@@ -123,7 +121,7 @@
 
           
           <div class="col-12  text-left head-father"  >
-            <h1 class="text-uppercase head-1" data-aos="fade-up" style="font-family: 'Pacifico';font-weight:100;word-wrap:break-word;">We Brew <br> <span> Technology </span></h1>
+            <h1 class="text-uppercase head-1" data-aos="fade-up" style="font-family: 'Pacifico';font-weight:100;word-wrap:break-word;text-align:center;">We Brew <br> <span> Technology </span></h1>
             <div class="single-text owl-carousel" style="margin-top: 50px !important">
               
               <div class="slide">
@@ -275,19 +273,19 @@
     <section class="contact-map-father">
       <div class="contact-map-son">
         <span class="close">Close</span>
-        
+        <h2 style="font-family: 'Pacifico'">Contact Us</h2>
         <div class="contact-body">
-          <h2 class="text-center" style="font-family: 'Pacifico'">Contact Us</h2>
-          <span style="font-family: 'Poppins'">Kindly Fill Out this brief form to get to us and we will get back to you in the shortest time</span>
+          
+          <span style="font-family: 'Poppins'">Kindly Fill Out this brief form to get to us and we will get back to you in the shortest time. Or <a href="estimate-project.html" style="color:#ED8D46">Estimate Project</a> </span>
           <div class="contact-form">
-            <form>
+            <form id="contactForm" method="post" action="controllers/contactHandler.php">
               <input type="text"  name="name" class="form-control" placeholder="Your firstname *" required="">
               <input type="email" name="email" class="form-control" placeholder="Email Address *" required="">
-              <input type="tel"   name="email" class="form-control" placeholder="Phone Number">
+              <input type="tel"   name="tel" class="form-control" placeholder="Phone Number">
               <textarea placeholder="Write your message here" autocomplete="off">
                 
               </textarea>
-              <button class="btn btn-primary btn-block" style="border-radius: 10px">Contact Us</button>
+              <button class="btn btn-primary btn-block" type="submit" style="border-radius: 10px">Contact Us</button>
             </form>
           </div>
         </div>
@@ -307,6 +305,7 @@
           </div>
         </div>
         <style type="text/css">
+        /* Move to style.css when citicab positioning works */
           .port-container{
             box-shadow: -10px 10px 10px #eee;
             border-radius: 5px;
@@ -348,17 +347,18 @@
           }
           .image-cont{
             max-height: 360px;
-            overflow-y: scroll;
           }
           .image-cont img{
-
+            width: auto !important;
+            height: auto;
+            margin : auto;
           }
         </style>
         <div class="owl-carousel portfolio-carousel" style="margin-top: 30px">
           <div class="item">
             <div class="row">
               <div class="col-lg-5 text-center image-cont" data-aos="fade-right">
-                <img src="images/parkcrowdy.jpg" alt="Park crowdy" style="width: 500px;height: auto;margin: auto;padding-bottom: 30px;max-width: 100%">
+                <img src="images/parkcrowdy.jpg" alt="Park crowdy">
               </div>
               <div class="col-lg-7" data-aos="fade-left">
                 <div class="port-container container">
@@ -381,7 +381,7 @@
           <div class="item">
             <div class="row">
               <div class="col-lg-5 text-center image-cont" data-aos="fade-right">
-                <img src="images/citikab.png" alt="Citikab" style="width: 500px;height: auto;margin: auto;padding-bottom: 30px;max-width: 100%">
+                <img src="images/citikab.png" alt="Citikab" >
               </div>
               <div class="col-lg-7" data-aos="fade-left" >
                 <div class="port-container container">
@@ -504,40 +504,23 @@
         <div class="row">
           <div class="col-md-9">
             <div class="row">
-              <div class="col-md-5">
-                <h2 class="footer-heading mb-4">About Us</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque facere laudantium magnam voluptatum autem. Amet aliquid nesciunt veritatis aliquam.</p>
+              <div class="col-md-8">
+                <h2 class="footer-heading mb-4"  style="font-size:20px">About Us</h2>
+                <p>By reinforcing the market pool for Deep Tech creators and engineers we help companies solve the technical talent shortage and build high-performing distributed engineering teams.</p>
               </div>
               <div class="col-md-3 ml-auto">
-                <h2 class="footer-heading mb-4">Quick Links</h2>
+                <h2 class="footer-heading mb-4"  style="font-size:20px">Quick Links</h2>
                 <ul class="list-unstyled">
-                  <li><a href="#about-section" class="smoothscroll">Terms</a></li>
-                  <li><a href="#about-section" class="smoothscroll">Policy</a></li>
-                  <li><a href="#about-section" class="smoothscroll">About Us</a></li>
-                  <li><a href="#services-section" class="smoothscroll">Services</a></li>
+                  <li><a href="about.html" class="smoothscroll">About Us</a></li>
+                  <li><a href="services.html" class="smoothscroll">Services</a></li>
                   <li><a href="#testimonials-section" class="smoothscroll">Testimonials</a></li>
-                  <li><a href="#contact-section" class="smoothscroll">Contact Us</a></li>
                 </ul>
-              </div>
-              <div class="col-md-3 footer-social">
-                <h2 class="footer-heading mb-4">Follow Us</h2>
-                <a href="#" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
-                <a href="#" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
-                <a href="#" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
-                <a href="#" class="pl-3 pr-3"><span class="icon-linkedin"></span></a>
               </div>
             </div>
           </div>
           <div class="col-md-3">
-            <h2 class="footer-heading mb-4">Subscribe Newsletter</h2>
-            <form action="#" method="post" class="footer-subscribe">
-              <div class="input-group mb-3">
-                <input type="text" class="form-control border-secondary text-white bg-transparent" placeholder="Enter Email" aria-label="Enter Email" aria-describedby="button-addon2">
-                <div class="input-group-append">
-                  <button class="btn btn-primary text-black" type="button" id="button-addon2">Send</button>
-                </div>
-              </div>
-            </form>
+            <h2 class="footer-heading mb-4" style="font-size:20px">Get Started</h2>    
+              <a class="btn btn-primary text-white" style="border-radius:0px" role="button" href="estimate-project.html">Estimate My Project</a>
           </div>
         </div>
       </div>
@@ -567,7 +550,7 @@
       $('.contact-trigger').click(function(e){
         e.preventDefault();
         $('.contact-map-father').css('visibility' , 'visible')
-        console.log('')
+        console.log('hi there')
       })
     </script>
   </body>
