@@ -4,7 +4,7 @@
     <title>Deephive &mdash; LEVERAGING ON DEEPTECH</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
+    <link rel="icon" type="image/png" href="images/icon1.png">
     <link href="https://fonts.googleapis.com/css?family=Pacifico|Poppins&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="fonts/flaticon/style.css">
@@ -84,7 +84,7 @@
         <div class="row align-items-center">
           
           <div class="col-6 col-xl-2">
-            <h1 class="mb-0 site-logo"><a href="index.html" class="h2 mb-0">Deephive<span class="text-primary">.</span> </a></h1>
+            <h1 class="mb-0 site-logo"><a href="index.html" class="h2 mb-0"><img src="images/icon1.png" style="height: 70px;padding-top:15px"> </a></h1>
           </div>
 
           <div class="col-12 col-md-10 d-none d-xl-block">
@@ -94,7 +94,8 @@
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="about.html" class="nav-link">About</a></li>
                 <li><a href="#next" class="nav-link smoothscroll">Services</a></li>
-                <li><a href="#" class="nav-link contact-trigger">Contact</a></li>
+                <li><a href="#" class="nav-link contact-trigger" onclick="contactTrigger()">Contact</a></li>
+                <li><a href="estimate-project.html" class="nav-link btn btn-primary " style="background-color: transparent;padding:7px 10px">Estimate My Project</a></li>                
               </ul>
             </nav>
           </div>
@@ -309,6 +310,26 @@
 		</div>
 	</section>    
 
+    <section class="contact-map-father">
+      <div class="contact-map-son">
+        <span class="close">&times;</span>
+        <h2 style="font-family: 'Pacifico'">Contact Us</h2>
+        <div class="contact-body">
+          
+          <span style="font-family: 'Poppins'">Kindly Fill Out this brief form to get to us and we will get back to you in the shortest time. Or <a href="estimate-project.html" style="color:#ED8D46">Estimate Your Project</a> </span>
+          <div class="contact-form">
+            <form id="contactForm" method="post" action="controllers/contactHandler.php">
+              <input type="text"  name="name" class="form-control" placeholder="Your fullname *" required="">
+              <input type="email" name="email" class="form-control" placeholder="Email Address *" required="">
+             <!--  <input type="text" name="subject" class="form-control" placeholder="Message Subject *" required=""> -->
+              <input type="tel"   name="tel" class="form-control" placeholder="Contact Number">
+              <textarea placeholder="Write your message here" autocomplete="off" name="message"></textarea>
+              <button class="btn btn-primary btn-block" type="submit" style="border-radius: 10px">Contact Us</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>     
     <footer class="site-footer">
       <div class="container">
         <div class="row">
@@ -323,14 +344,14 @@
                 <ul class="list-unstyled">
                   <li><a href="about.html" class="smoothscroll">About Us</a></li>
                   <li><a href="services.html" class="smoothscroll">Services</a></li>
-                  <li><a href="#testimonials-section" class="smoothscroll">Testimonials</a></li>
+                  <li><a href="index.html#testimonials-section" class="smoothscroll">Testimonials</a></li>
                 </ul>
               </div>
             </div>
           </div>
           <div class="col-md-3">
             <h2 class="footer-heading mb-4" style="font-size:20px">Get Started</h2>    
-              <a class="btn btn-primary text-white" style="border-radius:0px" role="button" href="estimate.html">Estimate My Project</a>
+              <a class="btn btn-primary text-white" style="border-radius:0px" role="button" href="estimate-project.html">Estimate My Project</a>
           </div>
         </div>
       </div>

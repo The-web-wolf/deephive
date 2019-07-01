@@ -306,61 +306,20 @@ jQuery(document).ready(function($) {
 	  return false;
 	});
 
-  	let resetPosition = () => {
-  		$('.portfolio_item').each(function(){
-  			$(this).removeClass('order-4')
-  			$(this).removeClass('order-12')
-  			$(this).removeClass('order-1')
-  			$(this).removeClass('slideInLeft')
-  			$(this).removeClass('pricing-popular');
-  			$(this).removeClass('slideInRight')
-  		})
-  	}
-
-  $('.portfolio_item.item_1').click(function(){
-  	resetPosition()
-  	$('.item_2').addClass('slideInRight');
-  	$('.item_2').addClass('order-4');
-  	$('.item_3').addClass('order-12');
-  	$('.item_3').addClass('slideInLeft');
-  	$(this).addClass('pricing-popular');
-  	$(this).addClass('order-1')
-  	let child = $(this).find('.pricing')
-  	//$(child).css('width', '900px')
-
-
-  })  
-  $('.portfolio_item.item_2').click(function(){
-  	resetPosition()
-  	$('.item_1').addClass('slideInRight');
-  	$('.item_1').addClass('order-4');
-  	$('.item_3').addClass('order-12');
-  	$('.item_3').addClass('slideInLeft');
-  	$(this).addClass('slideInRight')
-  	$(this).addClass('pricing-popular');
-  	$(this).addClass('order-1')
-  	let child = $(this).find('.pricing')
-  	//$(child).css('width', '900px')
-
-
-  })  
-  $('.portfolio_item.item_3').click(function(){
-  	resetPosition()
-  	$('.item_1').addClass('slideInRight');
-  	$('.item_1').addClass('order-4');
-  	$('.item_2').addClass('order-12');
-  	$('.item_2').addClass('slideInLeft');
-  	$(this).addClass('slideInRight')
-  	$(this).addClass('pricing-popular');
-  	$(this).addClass('order-1')
-  	let child = $(this).find('.pricing')
-  	//$(child).css('width', '900px')
-
-
-  })
-
-
 });
+    $('.contact-map-father').addClass('animated');
+$('.contact-map-son .close').click(function(){
+    $('.contact-map-father').addClass('slideOutDown')
+})
+
+function contactTrigger(){
+	$('.contact-map-father').removeClass('slideOutDown')
+	$('.contact-map-father').addClass('slideInUp')
+    $('.contact-map-father').css('visibility' , 'visible')
+    if($('body').hasClass('offcanvas-menu')){
+        $('body').removeClass('offcanvas-menu')          
+    }
+}
 
 $('#step_1').click(function(e){
 	e.preventDefault();
@@ -409,6 +368,7 @@ $("#step_1_s").click(function(){
 let form = $("#estimate-form");
 $(form).submit(function(e){
 	e.preventDefault()
+	$('#submit_cont').fadeOut('slow')
 	let formData = $(form).serialize()
 	$.ajax({
 		url  : 'controllers/estimate.php',
@@ -424,10 +384,40 @@ $(form).submit(function(e){
 			$('.caption-text').text('Sent. We\'ll Get Back To You Shortly!')
 		}
 		else{
-			alert(response)
+			alert(response);
+			$('#submit_cont').fadeIn('slow')
 		}
 	})
 	.fail(function(){
+		$('#submit_cont').fadeIn('slow')
+		alert('Could Not establish Connection with Our server. Kindly Check your internet Connection and try again')
+	})
+})	
+
+$("#contactForm").submit(function(e){
+	e.preventDefault()
+	$('#contactForm button').attr('disabled', 'disabled')
+	$('#contactForm button').text('Sending...')
+	let formData = $("#contactForm").serialize()
+	$.ajax({
+		url  : 'controllers/contactHandler.php',
+		type : "POST",
+		data : formData
+	})
+	.done(function(response){
+		if(response == 'sent'){
+			$('.form-control').val('')
+			$('#contactForm button').text('Sent. We\'ll Get Back To You Shortly!')
+		}
+		else{
+			alert(response);
+			$('#contactForm button').removeAttr('disabled')
+			$('#contactForm button').text('Contact Us')
+		}
+	})
+	.fail(function(){
+		$('#contactForm button').removeAttr('disabled')
+		$('#contactForm button').text('Contact Us')
 		alert('Could Not establish Connection with Our server. Kindly Check your internet Connection and try again')
 	})
 })	

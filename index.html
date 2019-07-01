@@ -11,6 +11,7 @@
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="icon" type="image/png" href="images/icon1.png">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
 
     <link rel="stylesheet" href="css/jquery.fancybox.min.css">
@@ -22,7 +23,7 @@
     <link rel="stylesheet" href="css/style.css">
     <style type="text/css">
       #home-section-overlay{
-        background : linear-gradient(to bottom, rgba(245, 98, 0, 0.8), rgba(251, 208, 0, 0.8));
+        background :linear-gradient(to bottom , #ED8D46,  #ED8D46);
         position: absolute;
         background-attachment: fixed;
         background-position: top
@@ -37,7 +38,7 @@
         bottom: 0;
         min-width: 100%; 
         min-height: 100%;
-        opacity: .1
+        opacity: .06
       }
       .service p {
         letter-spacing: 5px;
@@ -89,7 +90,7 @@
         <div class="row align-items-center">
           
           <div class="col-6 col-xl-2">
-            <h1 class="mb-0 site-logo"><a href="index.html" class="h2 mb-0">Deephive<span class="text-primary">.</span> </a></h1>
+            <h1 class="mb-0 site-logo"><a href="index.html" class="h2 mb-0"><img src="images/icon1.png" style="height: 70px;padding-top:15px"> </a></h1>
           </div>
 
           <div class="col-12 col-md-10 d-none d-xl-block">
@@ -99,7 +100,7 @@
                 <li><a href="about.html" class="nav-link">About</a></li>
                 <li><a href="#portfolio-carousel" class="smoothscroll">Portfolio</a></li>
                 <li><a href="services.html" class="nav-link">Services</a></li>
-                <li><a href="#" class="nav-link contact-trigger">Contact</a></li>
+                <li><a href="#" class="nav-link contact-trigger" onclick="contactTrigger()">Contact</a></li>
                 <li><a href="estimate-project.html" class="nav-link btn btn-primary " style="background-color: transparent;padding:7px 10px">Estimate My Project</a></li>
               </ul>
             </nav>
@@ -121,30 +122,9 @@
 
           
           <div class="col-12  text-left head-father"  >
-            <h1 class="text-uppercase head-1" data-aos="fade-up" style="font-family: 'Pacifico';font-weight:100;word-wrap:break-word;text-align:center;">We Brew <br> <span> Technology </span></h1>
-            <div class="single-text owl-carousel" style="margin-top: 50px !important">
-              
-              <div class="slide">
-                <h2  data-aos="fade-up" data-aos-delay="100" style="margin-top: 2%;text-shadow: -20px 0px 8px #Eee;font-family:'Philosopher';font-size: 4em;color:#eee">We <span style=""> Build</span></h2>
-                <div data-aos="fade-up" data-aos-delay="100">
-                  
-                </div>
-              </div>
-
-              <div class="slide">
-                <h2 data-aos="fade-up" data-aos-delay="100" style="margin-top: 2%;text-shadow: -20px 0px 8px #Eee;font-family:'Philosopher';font-size: 4em;color:#eee">We <span style=""> Train</span>.</h2>
-                <div data-aos="fade-up" data-aos-delay="100">
-                  
-                </div>
-              </div>
-
-              <div class="slide">
-                <h2 data-aos="fade-up" data-aos-delay="100" style="margin-top: 2%;text-shadow: -20px 0px 8px #Eee;font-family:'Philosopher';font-size: 4em;color:#eee">We <span style=""> Innovate</span>.</h2>
-                <div data-aos="fade-up" data-aos-delay="100">
-                  
-                </div>
-              </div>
-
+            <h1 class="text-uppercase head-1" data-aos="fade-up" style="font-family: 'Pacifico';font-weight:100;word-wrap:break-word;">We Brew <br> <span> Technology </span></h1>
+            <div class="container">
+              <h3 style="color: white">Perfectly crafted, creative and innovative Augmented Reality, Virtual Reality, Android and iPhone App Development Solutions.</h3>
             </div>
           </div>
             
@@ -269,28 +249,6 @@
         </div>
       </div>
     </section>
-    
-    <section class="contact-map-father">
-      <div class="contact-map-son">
-        <span class="close">Close</span>
-        <h2 style="font-family: 'Pacifico'">Contact Us</h2>
-        <div class="contact-body">
-          
-          <span style="font-family: 'Poppins'">Kindly Fill Out this brief form to get to us and we will get back to you in the shortest time. Or <a href="estimate-project.html" style="color:#ED8D46">Estimate Project</a> </span>
-          <div class="contact-form">
-            <form id="contactForm" method="post" action="controllers/contactHandler.php">
-              <input type="text"  name="name" class="form-control" placeholder="Your firstname *" required="">
-              <input type="email" name="email" class="form-control" placeholder="Email Address *" required="">
-              <input type="tel"   name="tel" class="form-control" placeholder="Phone Number">
-              <textarea placeholder="Write your message here" autocomplete="off">
-                
-              </textarea>
-              <button class="btn btn-primary btn-block" type="submit" style="border-radius: 10px">Contact Us</button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>    
 
     <section class="site-section bg-light" style="margin:0px"  id="portfolio-carousel">
 
@@ -499,6 +457,26 @@
       </div>
     </section>
 
+    <section class="contact-map-father">
+      <div class="contact-map-son">
+        <span class="close">&times;</span>
+        <h2 style="font-family: 'Pacifico'">Contact Us</h2>
+        <div class="contact-body">
+          
+          <span style="font-family: 'Poppins'">Kindly Fill Out this brief form to get to us and we will get back to you in the shortest time. Or <a href="estimate-project.html" style="color:#ED8D46">Estimate Your Project</a> </span>
+          <div class="contact-form">
+            <form id="contactForm" method="post" action="controllers/contactHandler.php">
+              <input type="text"  name="name" class="form-control" placeholder="Your fullname *" required="">
+              <input type="email" name="email" class="form-control" placeholder="Email Address *" required="">
+             <!--  <input type="text" name="subject" class="form-control" placeholder="Message Subject *" required=""> -->
+              <input type="tel"   name="tel" class="form-control" placeholder="Contact Number">
+              <textarea placeholder="Write your message here" autocomplete="off" name="message"></textarea>
+              <button class="btn btn-primary btn-block" type="submit" style="border-radius: 10px">Contact Us</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>      
     <footer class="site-footer">
       <div class="container">
         <div class="row">
@@ -541,17 +519,5 @@
 
   
   <script src="js/main.js"></script>
-
-  
-      <script type="text/javascript">
-      $('.contact-map-son .close').click(function(){
-        $('.contact-map-father').css('visibility' , 'hidden')
-      })
-      $('.contact-trigger').click(function(e){
-        e.preventDefault();
-        $('.contact-map-father').css('visibility' , 'visible')
-        console.log('hi there')
-      })
-    </script>
   </body>
 </html>

@@ -3,29 +3,12 @@ if($_SERVER['REQUEST_METHOD'] != 'POST'){
 	die('Invalid Request');
 }
 else{
-
-	// Requirement
-	$i_need = '';
-	$i_want = '';
-
-	foreach ($_POST['i_need'] as $key => $value) {
-		$i_need .= htmlspecialchars($value) . ', ';
-	}
-	if(isset($_POST['i_want'])){
-		foreach ($_POST['i_want'] as $key => $value) {
-			$i_want .= htmlspecialchars($value) . ', ';
-		}
-	}
 	// user_data 
 	$name 	= htmlspecialchars($_POST['name']);
 	$email	= filter_var(trim($_POST['email']), FILTER_SANITIZE_EMAIL);
 	$tel	= htmlspecialchars($_POST['tel']);
 
-	// project Info
-	$company		= htmlspecialchars($_POST['company']);
-	$description 	= htmlspecialchars($_POST['description']);
-
-	$description 	= $i_need . "<br>" . $i_want . "<hr>" . $description;
+	$description 	= htmlspecialchars($_POST['message']);
 
 	$email_headers  =   'MIME-Version: 1.0' . "\r\n";
 	$email_headers .=   'Content-type: text/html; charset=iso-8859-1' . "\r\n";
@@ -33,7 +16,7 @@ else{
 
 	$to 			= 	'info@deephive.org';
 
-	$subject 		= 	"Estimate Project";
+	$subject 		= 	"New Contact Message";
                       			
 	$email_content = '
 
@@ -269,7 +252,7 @@ else{
 			                <!-- END OF VERTICAL SPACER-->
 			                <!-- START OF HEADING TITLE-->
 			                <tr>
-			                  <td class="center" align="center" valign="top" bgcolor="#f0f0f0" style="padding: 0px 20px;  text-shadow: 1px 1px 0px #ffffff;font-size:24px ; color:#444444; font-family: Lucida Sans Unicode; line-height: 34px; ">'.$company.'</td>
+			                  <td class="center" align="center" valign="top" bgcolor="#f0f0f0" style="padding: 0px 20px;  text-shadow: 1px 1px 0px #ffffff;font-size:24px ; color:#444444; font-family: Lucida Sans Unicode; line-height: 34px; ">'.$subject.'</td>
 			                </tr>
 			                <!-- END OF HEADING TITLE-->
 			                <!-- START OF VERTICAL SPACER-->
@@ -318,16 +301,6 @@ else{
 			                <!-- END OF IMAGE-->
 			              </table></td>
 			            <!-- END OF SECOND COLUMN-->
-			            <td class="spacer" width="20" align="left" valign="top" bgcolor="#f0f0f0" style="margin: 0 !important; padding: 0 !important; line-height: 0 !important;">&nbsp;</td>
-			            <!-- START OF THIRD COLUMN-->
-			            <td class="one_fourth_last" align="left" valign="top" width="125" bgcolor="#f0f0f0" style=""><table width="100%">
-			                <!-- START OF IMAGE-->
-			                <tr>
-			                  <td valign="top" style="padding: 0px; font-size:13px ; color:#727272; font-family: Arial,sans-serif; line-height: 23px; "><b>Company:</b><br>'.$company.'</td>
-			                </tr>
-			                <!-- END OF IMAGE-->
-			              </table></td>
-			            <!-- END OF THIRD COLUMN-->
 			            <td class="spacer" width="20" align="left" valign="top" bgcolor="#f0f0f0" style="margin: 0 !important; padding: 0 !important; line-height: 0 !important;">&nbsp;</td>
 			            <!-- START OF FOURTH COLUMN-->
 			            <td class="one_fourth_last" align="left" valign="top" width="125" bgcolor="#f0f0f0" style=""><table width="100%">
